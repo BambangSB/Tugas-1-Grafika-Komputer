@@ -3,6 +3,12 @@ var ctx = canvas.getContext("2d");
 canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 
+// buat gambar
+var img = new Image ();
+   img.src="https://i.ibb.co/tXqDbrb/abbb.png" ;
+   img.onload = function(){
+   ctx.drawImage(img,140,160);
+        }
 
 // Create gradient
 var grd = ctx.createLinearGradient(0,0,200,0);
@@ -12,7 +18,10 @@ grd.addColorStop(1,"yellow");
 ctx.fillStyle = grd;
 ctx.fillRect(140,190,100,150);
 
-
+// buat text
+ctx.font="bold 15px CALIBRI";
+ctx.fillStyle="rgb(4, 29, 7)"
+ctx.fillText ("CLEAN",170,224)
 
 // warna biasa
 // ctx.fillStyle = "maroon";
